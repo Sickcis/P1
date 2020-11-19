@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class EscribeJSON {
     private static final String dir_json = "/Volumes/DATA MAC OSX/andres/Documents/aaUni/Tercer Curso/Primer Cuatrimestre/Notas/PracticaDIS/Proyecto_DIS/src/main/java/org/thegitbrothers/datos/videotecas.json";
 
-    public static void crearFicheroJson(ArrayList<golfPlayer> golfPlayers){
+    public static void crearFicheroJson(ArrayList<GolfPlayer> golfPlayers){
         try{
             FileWriter mywriter = new FileWriter(dir_json);
             mywriter.write(new Gson().toJson(golfPlayers));
