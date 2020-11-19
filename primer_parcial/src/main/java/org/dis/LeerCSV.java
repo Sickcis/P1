@@ -22,7 +22,7 @@ import com.opencsv.bean.*;
 
 public class LeerCSV {
 
-    public List<GolfPlayer> parseaCSV(String path) {
+    public static List<GolfPlayer> parseaCSV(String path) {
         List<GolfPlayer> players = null;
         try {
             BufferedReader fileReader = new BufferedReader(new FileReader("/Volumes/DATA MAC OSX/andres/Documents/aaUni/Tercer Curso/Primer Cuatrimestre/DIS/examen_andres/primer_parcial/best-golf-players.csv"));

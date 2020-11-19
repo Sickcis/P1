@@ -4,14 +4,15 @@ import com.google.gson.Gson;
 
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class EscribeJSON {
-    private static final String dir_json = "/Volumes/DATA MAC OSX/andres/Documents/aaUni/Tercer Curso/Primer Cuatrimestre/Notas/PracticaDIS/Proyecto_DIS/src/main/java/org/thegitbrothers/datos/videotecas.json";
 
-    public static void crearFicheroJson(ArrayList<GolfPlayer> golfPlayers){
+    private static final String dir_csv = "/Volumes/DATA MAC OSX/andres/Documents/aaUni/Tercer Curso/Primer Cuatrimestre/DIS/examen_andres/primer_parcial/best-golf-players.json";
+    public static void crearFicheroJson(List<GolfPlayer> golfPlayers){
         try{
-            FileWriter mywriter = new FileWriter(dir_json);
+            FileWriter mywriter = new FileWriter(dir_csv);
             mywriter.write(new Gson().toJson(golfPlayers));
             mywriter.close();
         }catch (Exception ex){
@@ -19,5 +20,11 @@ public class EscribeJSON {
         }
 
     }
-    
+
+    public static void main(String[] args){
+        List<GolfPlayer> players = LeerCSV.parseaCSV(dir_csv);
+
+        EscribeJSON.crearFicheroJson(players);
+    }
+
  }
