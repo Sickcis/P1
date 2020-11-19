@@ -4,13 +4,17 @@ package org.dis;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 
-// Otros imports ...
+import java.util.ArrayList;
+import java.util.List;
+
+import com.opencsv.bean.*;
 
 public class LeerCSV {
 
-    public List<golfPlayer> parseaCSV(String path) {
-        ....
-        List<golfPlayer> players = csvToBean.parse();
+    public List<GolfPlayer> parseaCSV(String path) {
+
+        List<GolfPlayer> players = csvToBean.parse();
+
         return players;
     }
 }
